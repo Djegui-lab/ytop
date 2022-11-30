@@ -3,9 +3,9 @@ import streamlit as st
 import numpy as np
 
 
-def diabete_prediction(num):
+def diabete_prediction(input_data):
 
-    tableau_numpy = np.array(num)
+    tableau_numpy = np.array(input_data)
     input_data_reshape = tableau_numpy.reshape(1, -1)
     prediction =knn_from_joblib.predict(input_data_reshape)
 
@@ -31,11 +31,10 @@ def main():
 
     if st.button("resultat_du_test_diabete"):
         diagnostique = diabete_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
-        st.balloons()     
-        st.success('The output is {}'.format(diagnostique))
+         st.balloons()     
+            st.success('The output is {}'.format(diagnostique))
    
     st.success(diagnostique)
-
 
 if __name__ == "__main__":
     main()
