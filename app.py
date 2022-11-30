@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import pickle
-import joblib
 knn_from_joblib = joblib.load('my_model_knn.pkl.pkl')
 
 
