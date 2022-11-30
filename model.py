@@ -15,8 +15,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3,random_sta
 
 #Implement Random Forest Classifier
 from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier()
-classifier.fit(X_train,y_train)
+clf = RandomForestClassifier()
+clf.fit(X_train,y_train)
 
 #Prediction
 y_pred = classifier.predict(X_test)
@@ -27,4 +27,5 @@ score = accuracy_score(y_test,y_pred)
 #print(score)
 
 #create a pickle file using serialization
-joblib.dump(classifier, 'my_model_knn.pkl.pkl')
+from joblib import dump, load
+dump(clf, 'filename.joblib')
