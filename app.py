@@ -4,17 +4,6 @@ import numpy as np
 
 
 
-def diabete_prediction(input_data):
-
-    tableau_numpy = np.array(input_data)
-    input_data_reshape = tableau_numpy.reshape(1, -1)
-    prediction =clf.predict(input_data_reshape)
-
-    if (prediction[0]) == 1:
-        return " La personne est  diabetique"
-    else:
-        return "La personne n'est pas  diabetique"
-
 
 def master():
 
