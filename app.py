@@ -41,6 +41,4 @@ if __name__ == "__main__":
     main()
     
     
-    st.balloons()     
-    st.success('The output is {}'.format(result))
    
