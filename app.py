@@ -30,10 +30,17 @@ def main():
     diagnostique = ""
 
     if st.button("resultat_du_test_diabete"):
-        diagnostique = diabete_prediction(
-            [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
+        diagnostique = diabete_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
+        st.balloons()     
+    st.success('The output is {}'.format(diagnostique))
+   
     st.success(diagnostique)
 
 
 if __name__ == "__main__":
     main()
+    
+    
+    st.balloons()     
+    st.success('The output is {}'.format(result))
+   
