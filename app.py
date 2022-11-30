@@ -1,13 +1,15 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+from joblib import dump, load
 
+clf = load('filename.joblib')
 
 def diabete_prediction(input_data):
 
     tableau_numpy = np.array(input_data)
     input_data_reshape = tableau_numpy.reshape(1, -1)
-    prediction =knn_from_joblib.predict(input_data_reshape)
+    prediction =clf.predict(input_data_reshape)
 
     if (prediction[0]) == 1:
         return " La personne est  diabetique"
@@ -36,8 +38,6 @@ def main():
    
     st.success(diagnostique)
 
-if __name__ == "__main__":
-    main()
     
     
    
