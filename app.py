@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+import joblib
 from joblib import dump, load
 
 clf = load('filename.joblib')
