@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 
 
-clf = load('filename.joblib')
 
 def diabete_prediction(input_data):
 
