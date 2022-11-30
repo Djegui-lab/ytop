@@ -28,7 +28,7 @@ def main():
     BMI = st.number_input('Indice de masse corporelle')
     DiabetesPedigreeFunction = st.number_input('FonctionPedigreeDiabete')
     Age = st.number_input('Votre age ')
-    diagnostique = ""
+diagnostique = ""
 
     if st.button("resultat_du_test_diabete"):
         diagnostique = diabete_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
