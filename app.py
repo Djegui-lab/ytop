@@ -16,7 +16,7 @@ def diabete_prediction(input_data):
         return "La personne n'est pas  diabetique"
 
 
-def main():
+def master():
 
     st.title("APPLICATION MOBILE POUR LA DETECTION DE DIABETE")
     st.subheader("(AUTEUR: Mr.DJEGUI_WAGUE)")
@@ -36,7 +36,7 @@ diagnostique = ""
         st.success('The output is {}'.format(diagnostique))
    
         st.success(diagnostique)
-if __name__ == "__main__":
-    main()  
+if __name__ == "__master__":
+    master()  
     
    
