@@ -36,8 +36,7 @@ def main():
         st.success('The output is {}'.format(diagnostique))
    
     st.success(diagnostique)
-
-  if __name__ == "__main__":
+if __name__ == "__main__":
     main()  
     
    
