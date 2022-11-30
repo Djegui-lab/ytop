@@ -35,7 +35,7 @@ def main():
         st.balloons()     
         st.success('The output is {}'.format(diagnostique))
    
-    st.success(diagnostique)
+        st.success(diagnostique)
 if __name__ == "__main__":
     main()  
     
