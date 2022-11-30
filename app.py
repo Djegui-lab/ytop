@@ -37,6 +37,7 @@ def main():
    
     st.success(diagnostique)
 
-    
+  if __name__ == "__main__":
+    main()  
     
    
