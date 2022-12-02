@@ -2,11 +2,13 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
+load_model=pickle.load(open('C:/ProgramData/Anaconda3/envs/djegui/deployement_machine_learning/modelWAGUE.pkl','rb'))
 
 def diabete_prediction(entree_data):
     tableau_numpy = np.array(entree_data)
     input_data_reshape = tableau_numpy.reshape(1, -1)
     prediction = load_model.predict(input_data_reshape)
+    print(prediction)
 
     if (prediction[0]) == 1:
         return " La personne est  diabetique"
@@ -32,7 +34,7 @@ def main():
     st.success('The output is {}'.format(diagnostique))  
    
         
-if __name__ == "__master__":
-    master()  
+if __name__ == "__main__":
+    main()  
     
    
