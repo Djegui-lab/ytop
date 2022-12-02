@@ -27,4 +27,4 @@ score = accuracy_score(y_test,y_pred)
 #print(score)
 
 filename='modelWAGUE.pkl'
- pickle.dump(clf,open(filename','wb')
+pickle.dump(clf,open(filename','wb')
