@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 
 
-load_model=pickle.load(open('C:/ProgramData/Anaconda3/envs/djegui/deployement_machine_learning/modelWAGUE.PKL','rb'))
 def diabete_prediction(entree_data):
     tableau_numpy = np.array(entree_data)
     input_data_reshape = tableau_numpy.reshape(1, -1)
