@@ -26,5 +26,5 @@ from sklearn.metrics import accuracy_score
 score = accuracy_score(y_test,y_pred)
 #print(score)
 
-filename='modelWAGUE.pkl'
+filename='diabetes_model.sav'
 pickle.dump(clf,open(filename','wb')
