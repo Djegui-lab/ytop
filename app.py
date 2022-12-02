@@ -3,9 +3,9 @@ import streamlit as st
 import numpy as np
 
 
+=pickle.load(open('C:/ProgramData/Anaconda3/envs/djegui/deployement_machine_learning/modelWAGUE.PK
 
-
-def master():
+def main():
 
     st.title("APPLICATION MOBILE POUR LA DETECTION DE DIABETE")
     st.subheader("(AUTEUR: Mr.DJEGUI_WAGUE)")
@@ -17,14 +17,14 @@ def master():
     BMI = st.number_input('Indice de masse corporelle')
     DiabetesPedigreeFunction = st.number_input('FonctionPedigreeDiabete')
     Age = st.number_input('Votre age ')
-diagnostique = ""
+    diagnostique = ""
 
     if st.button("resultat_du_test_diabete"):
         diagnostique = diabete_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
-        st.balloons()     
-        st.success('The output is {}'.format(diagnostique))
+          st.balloons()     
+    st.success('The output is {}'.format(diagnostique))  
    
-        st.success(diagnostique)
+        
 if __name__ == "__master__":
     master()  
     
